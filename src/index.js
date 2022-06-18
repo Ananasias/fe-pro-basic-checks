@@ -45,10 +45,10 @@ export const reducerIf = (action, string) => {
  */
 export const reducerSwitch = (action, string) => {
   switch (action) {
-    case "uppercase":
+    case 'uppercase':
       return string.toUpperCase();
-    case "lowercase":
-        return string.toLowerCase();
+    case 'lowercase':
+      return string.toLowerCase();
     case 'capitalize':
       return capitalizeString(string);
     case 'fence':
@@ -56,15 +56,13 @@ export const reducerSwitch = (action, string) => {
     default:
       return string;
   }
-
 };
-
 
 /**
  Стрелочная
  * @param {string} string
  */
-export const consoleLoggerWordsForOf = (string) =>{
+export const consoleLoggerWordsForOf = (string) => {
   for (let letter of string) {
     console.log(letter);
   }
@@ -84,7 +82,8 @@ export const consoleLoggerWordsFor = (string) => {
  Стрелочная
  * @param {string} string
  */
-export const consoleLoggerWordsWhile = (string) =>{
+export const consoleLoggerWordsWhile = (string) => {
+  let index = 0;
   while (index < string.length) {
     console.log(string[index]);
     index++;
@@ -98,5 +97,5 @@ export const consoleLoggerWordsWhile = (string) =>{
 export const consoleLoggerWordsSplit = (string) => {
   string.split('').forEach((letter) => {
     console.log(string);
-  })
+  });
 };
